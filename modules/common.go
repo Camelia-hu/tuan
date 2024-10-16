@@ -7,6 +7,7 @@ type User struct {
 	Name       string
 	StudentNum string
 	PassWord   string
+	Salt       string
 }
 
 type RegisterReq struct {

@@ -5,3 +5,9 @@ http :
 data :
   mysql :
     dsn : "root:15926653820@Hu@tcp(127.0.0.1:3306)/tuan?charset=utf8mb4&parseTime=True&loc=Local"
+  jwt :
+    stSignKey : "anklebone"
+  oss :
+    bucketname: "redrock-picture-storage"
+    endpoint: "https://oss-cn-chengdu-aliyuncs.com"
+    return: "https://redrock-picture-storage.oss-cn-chengdu.aliyuncs.com/"

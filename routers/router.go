@@ -2,6 +2,7 @@ package routers
 
 import (
 	"github.com/Camelia-hu/tuan/service"
+	"github.com/Camelia-hu/tuan/utils"
 	"github.com/gin-gonic/gin"
 )
 
@@ -12,6 +13,10 @@ func RoutersInit() {
 	{
 		user.POST("/register", service.Register)
 		user.GET("/login", service.Login)
+		auth := user.Group("/auth", utils.AuthToken())
+		{
+			auth.POST("/upload", service.UploadUser)
+		}
 	}
 
 	activity := r.Group("/activity")
